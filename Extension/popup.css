@@ -1,0 +1,55 @@
+/* Adjust popup size */
+body {
+    width: 300px; /* Set desired width */
+    height: 400px; /* Set desired height */
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    border-radius: 10px; /* Set border radius */
+    border: 1px solid #ccc;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Chat container style */
+#chat-container {
+    max-height: 200px; /* Reduce max-height */
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%; /* Ensure chat container spans entire width */
+}
+
+/* Chat input style */
+#user-input {
+    width: calc(100% - 20px);
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px; /* Add margin-bottom to create space */
+}
+
+/* Message styles */
+.user-message {
+    font-weight: bold;
+}
+
+.bot-message {
+    font-weight: normal;
+}
+
+/* Clear chat button style */
+#clear-chat-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; /* Adjust padding here */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px; /* Add margin-bottom to create space */
+}
+
+#clear-chat-btn:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Extension</title>
+</head>
+<body>
+    <!-- Container for chat messages -->
+    <div id="chat-container"></div>
+
+    <!-- Your injected JavaScript -->
+    <script>
+        // Function to handle user input and respond
+        function handleUserInput(input) {
+            if (input.toLowerCase() === 'hello') {
+                return 'hi';
+            } else {
+                return 'Sorry, I don\'t understand.';
+            }
+        }
+
+        // Function to display the chat conversation
+        function displayChatMessage(message) {
+            const chatContainer = document.getElementById('chat-container');
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            chatContainer.appendChild(messageElement);
+        }
+
+        // Find all <span> elements
+        document.querySelectorAll('span').forEach(span => {
+            // Add click event listener to each <span> element
+            span.addEventListener('click', function() {
+                // Prompt user for input
+                const userInput = prompt('Enter your message:');
+                // Respond to the user input
+                const response = handleUserInput(userInput);
+                // Display the response
+                displayChatMessage('User: ' + userInput);
+                displayChatMessage('Bot: ' + response);
+            });
+        });
+    </script>
+</body>
+</html>
